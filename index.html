@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Shop</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top" id="navbar" style="display: block;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/logo.png" alt="" width="100" height="50">
+            </a>
+        </div>
+    </nav>
+    <!--Banner principal-->
+    <section class="masthead">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Explora, compra y disfruta. <br>Cada escena tiene algo para
+                        ti
+                    </h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white mb-5">Pausa tu serie, descubre tu próxima compra. ¡Cada escena es una
+                        oportunidad!</p>
+                    <a class="pulsating-play-btn" onclick="showVideo()"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits py-5">
+        <div class="container">
+            <h2>¿Por qué Netflix Shop?</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="./assets/images/benefit1.jpg" alt="Exploración interactiva"
+                        class="img-fluid py-3 rounded">
+                    <h4>Exploración interactiva</h4>
+                    <p>Descubre productos ocultos en tus series favoritas.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./assets/images/benefit2.jpg" alt="Compra inmediata" class="img-fluid py-3">
+                    <h4>Compra inmediata</h4>
+                    <p>Consigue los artículos con un solo clic sin salir de la serie.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./assets/images/buzo.webp" alt="Exclusividad" class="img-fluid py-3">
+                    <h4>Exclusividad</h4>
+                    <p>Accede a productos oficiales y de edición limitada.</p>
+                </div>
+            </div>
+            <div class="row demo">
+                <div class="card text-center ">
+                    <div class="card-body">
+                        <h4 class="card-title">Tu serie favorita, ahora tu tienda favorita.</h4>
+                        <p class="card-text">Dale play a una nueva forma de comprar mientras disfrutas tu serie..</p>
+                        <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#videoModal">Descúbrelo
+                            ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formulario">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="card col-10  card-form">
+                    <div class="py-5 text-center">
+                        <h3 class="card-title">Tu opinión es importante!</h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form
+                            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfkXQZsH4K24ujNfl8jHq_VVNbAl4cn2JG0oOLuLa1_0uB6qQ/formResponse"
+                            method="post" target="_blank" style="width: 100%;">
+                            <!-- Name input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="text" id="formNombre" class="form-control" name="entry.187829560"
+                                    required />
+                                <label class="form-label" for="formNombre">Nombre</label>
+                            </div>
+
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="text" id="form4Ocupacion" class="form-control" name="entry.1727736832"
+                                    required />
+                                <label class="form-label" for="form4Ocupacion">Ocupación</label>
+                            </div>
+
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <textarea class="form-control" id="form4Opinion" rows="4"
+                                    name="entry.1118998830"></textarea>
+                                <label class="form-label" for="form4Opinion">¿Qué opinión te genera Netflix
+                                    Shop?</label>
+                            </div>
+
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <textarea class="form-control" id="form4Sugerencia" rows="4"
+                                    name="entry.1084499944"></textarea>
+                                <label class="form-label" for="form4Sugerencia">¿Qué cambiarias o agregarías a Netflix
+                                    Shop?</label>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button data-mdb-ripple-init type="submit"
+                                class="btn btn-submit text-white btn-block mb-4">Enviar
+                                opinión</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div id="videoContainer">
+        <div id="videoOverlay">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 col-md-10 col-lg-8 mx-auto p-5 text-white over-msg rounded shadow-lg">
+                    <div class="pt-5 px-5">
+                        <h2 class="fw-bold">Pausa en el momento justo y descubre los objetos ocultos en cada escena.
+                            ¿Podrás
+                            encontrarlos todos?
+                        </h2>
+                    </div>
+                    <div class="mt-3 pb-5">
+                        <button id="playButton" class="btn text-white">Play</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="videoOverlayEnd" style="display: none;">
+            <div class="row justify-content-center text-center">
+                <div id="contentEnd" class="col-12 col-md-10 col-lg-8 mx-auto p-5 text-white rounded shadow-lg">
+                    <div class="pt-5 px-5">
+                        <h2 id="messageEnd" class="fw-bold">
+                        </h2>
+                    </div>
+                    <div class="row mt-5 pb-5">
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <button class="btn text-white btn-primary">Quiero saber más</button>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <button id="closeOverlayEnd" class="btn text-white btn-dark">Volver a ver</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="cardOverlay" style="display: none;">
+            <div class="row justify-content-center text-center">
+                <div class="col-8 col-md-8 col-lg-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
+                            data-mdb-ripple-color="light">
+                            <img id="productImg"
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/12.webp"
+                                style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+                                alt="Laptop" />
+                            <a href="#!">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <div class="card-body pb-0">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p id="titleProduct" class="text-dark fw-bold"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-0" />
+                        <div class="card-body pb-0">
+                            <p id="textProduct" #small text-muted">VISA Platinum</p>
+                        </div>
+                        <hr class="my-0" />
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+                                <button id="cerrarCardOverlay" type="button" class="btn btn-dark">Continuar</button>
+                                <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                    class="btn btn-primary">Buy now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto p-0">
+                <video id="video" controls class="w-100">
+                    <source src="./assets/video/video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div class="col-12 col-md-8 col-lg-8 text-end">
+                <button class="btn btn-submit text-white" id="closeButton">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-3 bg-footer">
+        <p class="text-center">© 2025 Uniandes</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
